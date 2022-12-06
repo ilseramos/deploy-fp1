@@ -1,0 +1,26 @@
+<h1>{{producto.nombre | uppercase}}</h1>
+
+
+<div class="row">
+    <div class="col-md-4">
+
+        <img [src]="producto.picture" class="img-fluid">
+        <br><br>
+
+        <a routerLink="/productos" class="btn btn-outline-primary btn-block">Regresar</a>
+        <!-- boton para eliminar con etiqueta a-->
+        <a (click)="eliminarProducto()" class="btn btn-outline-danger btn-block">Eliminar</a>
+        <!-- boton para actualizar con etiqueta a-->
+        <a (click)="actualizar()" class="btn btn-outline-success btn-block">Actualizar</a>
+
+
+    </div>
+    <div class="col-md-8">
+        <h3>{{producto.nombre}}</h3>
+        <hr>
+        <p>
+            {{producto.descripcion}}
+        </p>
+    </div>
+
+</div>

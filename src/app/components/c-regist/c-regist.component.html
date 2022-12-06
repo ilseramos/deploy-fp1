@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col">
+        <div class="card text-white bg-danger mb-3" style="max-width: 75%; margin: 0 auto; top: 30%;">
+            <div class="card-body">
+                <form>
+                    <!-- input for name -->
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre" class="form-control" type="text" name="nombre" [(ngModel)]="categoria.nombre">
+                    </div>
+                    <!-- input for description -->
+                    <div class="form-group">
+                        <label for="descripcion">Descripcion</label>
+                        <input id="descripcion" class="form-control" type="text" name="descripcion" [(ngModel)]="categoria.descripcion">
+                    </div>
+                </form>
+                <br>
+                <button class="btn btn-success" (click)="registrarCategoria()">Registrar</button> 
+                <button class="btn btn-danger text-right" (click)="cancelar()">Cancelar</button> 
+            </div>
+        </div>
+        
+    </div>
+</div>
