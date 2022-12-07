@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'productos', component: PublicComponent },
   { path: 'perfil', component: PrivateComponent, canActivate: [AuthGuard] },
   { path: '**', pathMatch: 'full', redirectTo: 'public' },
-  { path: 'carrito', component: CarritoComponent, canActivate: [AuthGuard] },
+  { path: 'carrito', component: CarritoComponent,  },
   { path: 'producto' , component: ProductoComponent},
   { path: 'registroP', component: PRegistComponent},
   { path: 'registroC', component: CRegistComponent},

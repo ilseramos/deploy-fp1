@@ -53,10 +53,10 @@
   <li class="nav-item" routerLinkActive="active">
     <a class="nav-link" href="#">Ropa de moda</a>
   </li> -->
-  <li class="nav-item" routerLinkActive="active" *ngIf="auth.isAuthenticated$ | async"  >
-    <a class="nav-link" routerLink="carrito">Carrito</a>
+  <li class="nav-item" routerLinkActive="active" >
+    <a class="nav-link" routerLink="carrito" >Carrito</a>
   </li>
-  <li class="nav-item" routerLinkActive="active" *ngIf="auth.isAuthenticated$ | async"  >
+  <li class="nav-item" routerLinkActive="active" *ngIf="auth.isAuthenticated$ | async">
     <a class="nav-link" routerLink="registroP">registrar Producto</a>
 </nav>
 
