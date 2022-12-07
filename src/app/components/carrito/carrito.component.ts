@@ -14,13 +14,13 @@ import { ActivatedRoute } from '@angular/router';
 export class CarritoComponent {
 
   productos: any = [];
-  id = this.activatedRoute.snapshot.paramMap.get('id');
+  // id = this.activatedRoute.snapshot.paramMap.get('id');
   constructor(
     public auth: AuthService,
-    public router: Router,
-    public productoService: ProductoService,
-    private carritoService: CarritoService,
-    private activatedRoute: ActivatedRoute
+    // public router: Router,
+    // public productoService: ProductoService,
+    // private carritoService: CarritoService,
+    // private activatedRoute: ActivatedRoute
     ) { 
     }
 
@@ -28,14 +28,14 @@ export class CarritoComponent {
 
 
     // metodo para obtener todos los productos del carrito
-    getCarrito() {
-      this.carritoService.getCarrito(this.id).then((data: any) => {
-        this.productos = data;
-        console.log(this.productos);
-      }).catch((error) => {
-        console.log(error);
-      });
-    }
+    // getCarrito() {
+    //   this.carritoService.getCarrito(this.id).then((data: any) => {
+    //     this.productos = data;
+    //     console.log(this.productos);
+    //   }).catch((error) => {
+    //     console.log(error);
+    //   });
+    // }
 
     // metodo para consultar la informacion de los productos del carrito y ponerlos en el array productos
 
