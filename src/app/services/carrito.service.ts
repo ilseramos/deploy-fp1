@@ -13,7 +13,7 @@ export class CarritoService {
   ) { }
 
   // Metodo para consultar el carrito por el id del usuario
-  getCarrito(id: string) {
+  getCarrito(id: string|any) {
     return this.http.get(`${this.url}/${id}`).toPromise();
   }
   

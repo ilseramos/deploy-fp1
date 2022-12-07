@@ -8,7 +8,7 @@
                         <label for="cliente" class="col-12 col-md-2 col-form-label h2">Cliente : {{user.nickname}}</label>
                     </div>
                     <div class="form-group row">
-                        <label for="email" class="col-12 col-md-2 col-form-label h2">Correo : {{user.email}}</label>
+                        <label for="email" class="col-12 col-md-3 col-form-label h2">Correo: {{user.email}}</label>
                     </div>
 
                     <div id="carrito" class="form-group table-responsive" >
@@ -18,14 +18,21 @@
                                     <th scope="col">Imagen</th>
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Precio</th>
-                                    <th scope="col">Cantidad</th>
-                                    <th scope="col">Sub Total</th>
                                     <th scope="col">Eliminar</th>
                                 </tr>
 
                             </thead>
                             <tbody >
-
+                                <tr *ngFor="let producto of productos">
+                                    <th scope="col">
+                                        <img [src]="producto.picture" class="img-fluid" style="width: 100px;">
+                                    </th>
+                                    <th scope="col">{{producto.nombre}}</th>
+                                    <th scope="col">{{producto.precioUni | currency:'USD':true}}</th>
+                                    <th scope="col">
+                                        <a  class="btn btn-outline-danger btn-block">Eliminar</a>
+                                    </th>
+                                </tr>
                             </tbody>
                             <tr>
                                 <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
@@ -54,7 +61,7 @@
 
                     <div class="row justify-content-between">
                         <div class="col-md-4 mb-2">
-                            <a href="index.html" class="btn btn-info btn-block">Seguir comprando</a>
+                            <a routerLink="/" class="btn btn-info btn-block">Seguir comprando</a>
                         </div>
                         <div class="col-xs-12 col-md-4">
                             <button href="#" class="btn btn-success btn-block" id="procesar-compra">Realizar compra</button>
